@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
+import { Nav } from '../components/Nav/Nav'
 
 const Home: NextPage = () => {
-  return <div className='text-2xl text-red-500'>
-    aze
-  </div>
+  return <>
+    <Nav />
+  </>
 }
 
 export default Home
