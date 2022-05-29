@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import React, { useRef } from 'react'
 import { NavItem, NavItems } from './NavItems'
-import {MenuIcon} from '@heroicons/react/outline'
+import { MenuIcon } from '@heroicons/react/outline'
 import { useToggle } from '../../hooks/useToggle'
 
 
 export const Nav = () => {
-  const {state: open, toggle} = useToggle(false)
+  const { state: open, toggle } = useToggle(false)
   return <nav
     className="
         flex flex-wrap
@@ -15,9 +15,12 @@ export const Nav = () => {
         py-4
         sm:py-0
         px-4
+        justify-between
         text-gray-700
-        bg-white
-        border-b-2
+        dark:text-white
+       border-b-[1px]
+       dark:border-zinc-800
+        bg-slate-100 dark:bg-stone-900
       "
   >
     <div>
@@ -28,9 +31,9 @@ export const Nav = () => {
       </Link>
     </div>
     <button className="cursor-pointer sm:hidden block" onClick={toggle}>
-    <MenuIcon className="h-6 w-6"/>
+      <MenuIcon className="h-6 w-6" />
     </button>
-    
+
 
     <div className={`${open ? "" : "hidden"} w-full sm:flex sm:items-center sm:w-auto sm:flex-1 sm:justify-center`}>
       <ul
@@ -44,7 +47,7 @@ export const Nav = () => {
         {NavItems.map((i: NavItem, idx: number) => (
           <li key={idx}>
             <Link href={i.href}>
-              <a className="sm:p-4 py-2 block hover:text-amber-400">{i.label}</a>
+              <a className="sm:p-4 py-2 block hover:text-amber-400 dark:text-white">{i.label}</a>
             </Link>
 
           </li>
