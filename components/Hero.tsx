@@ -30,7 +30,7 @@ const HeroContent = () => {
 }
 
 const HeroImage = () => {
-  return <div className="relative hidden sm:block sm:h-36 md:w-32">
+  return <div className="relative hidden lg:block lg:h-36 lg:w-32">
     <Image src="/assets/placeholder.webp" layout="fill" />
   </div>
 }

@@ -7,7 +7,7 @@ export interface SectionProps extends ReactChild {
 }
 
 const Section = ({ children, className }: SectionProps) => {
-    return <section className={`${className ? className : ""} px-3 py-4 bg-slate-100 dark:bg-stone-900`}>
+    return <section className={`${className ? className : ""} px-3 py-4 `}>
         {children}
     </section>
 }
